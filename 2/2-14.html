@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+    // function showMessage(){
+    //     alert('안녕!');
+    // }
+    // showMessage();
+    // showMessage();
+
+    // let userName='john';
+    // function showMessage(){
+    //     let message='hello, ' + userName;
+    //     alert(message);
+    // }
+    // showMessage();
+
+    // let userName='jogn';
+    // function showMessage(){
+    //     userName='bob';
+    //     let message = 'Hello, ' + userName;
+    //     alert(message);
+    // }
+    // alert(userName);
+    // showMessage();
+    // alert(userName);
+    
+    // let userName='john';
+    // function showMessage(){
+    //     let userName='bob';
+    //     let message = 'hello ,' + userName;
+    //     alert(message);
+    // }
+    // showMessage();
+    // alert(userName);
+
+    // function showMessage(from,text){
+    //     alert(from + ':' + text);
+    // }
+    // showMessage('A','hello');
+    // showMessage('B','what?');
+        
+    // function showMessage(from,text){
+    //     from = '*' + from + '*';
+    //     alert(from + ': ' +text);
+    // }
+    // let from='ann';
+    // showMessage(from,'hello');
+    // alert(from);
+
+    // function showMessage(from,text="no text given"){
+    //     alert(from + ":" +text);
+    // }
+    // showMessage("ann");
+
+    // function sum(a,b){
+    //     return a + b;
+    // }
+    // let result=sum(1,2);
+    // alert(result);
+
+    // function checkAge(age){
+    //     if(age>=18){
+    //         return true;
+    //     }else{
+    //         return confirm('보호자의동의?');
+    //     }
+    // }
+    // let age=prompt('나이를 알려주세요' ,0);
+    // if(checkAge(age)){
+    //     alert('허용');
+    // }else{
+    //     alert('차단');
+    // }
+
+    // function showPrime(n){
+    //     for(let i=2;i<n;i++){
+    //         if(!isPrime(i)) continue;
+    //         alert(i);
+    //     }
+    // }
+    // function isPrime(n){
+    //     for(let i=2;i<n;i++){
+    //         if(n%i==0) return false;
+    //     }
+    //     return true;
+    // }
+    // showPrime(30);
+
+    // function checkAge(age){
+    //     return (age>18) ||  confirm('보호자의 동의?');
+    // }
+    // checkAge(2);
+
+    // function min(a,b){
+    //     return (a<b) ? alert(a) : alert(b);
+    // }
+    // min(2, 5) == 2
+    // min(3, -1) == -1
+    // min(1, 1) == 1
+
+    function pow(a,b){
+        let result = a;
+        for(let i=1; i<b; i++){
+            result*=a;
+        }
+        return result;
+    }
+    let x=prompt('x?',1);
+    let y=prompt('y?',1);
+    if(y<1){
+        alert('양의 정수만 입력가능');
+    }else{
+        alert(pow(x,y));
+    }
+
+
+    </script>
+</body>
+</html>

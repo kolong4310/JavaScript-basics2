@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let user = {name:'john'};
+        // let admin = user;
+        // admin.name = 'pete';
+        // alert(user.name);
+
+        // let a={};
+        // let b=a;
+        // alert(a==b);
+        // alert(a===b);
+
+        let user = {
+            name:"john",
+            age:30
+        };
+        let clone={};
+        for(let key in user){
+            clone[key]=user[key];
+        }
+        clone.name='pete';
+        alert(user.name);
+
+    </script>
+</body>
+</html>
