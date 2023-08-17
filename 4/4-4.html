@@ -7,15 +7,26 @@
 </head>
 <body>
     <script>
-        let user={
-            name:"john",
-            age:30,
-        };
-        user.sayHi = function(){
-            alert('hi');
-        };
-        user.sayHi();
+        // let user={
+        //     name:"john",
+        //     age:30,
+        // };
+        // user.sayHi = function(){
+        //     alert('hi');
+        // };
+        // user.sayHi();
+        
 
+        user = {
+            sayHi : function(){
+                alert('hello');
+            }
+        };
+        user = {
+            sayHi(){
+                alert('hello');
+            }
+        };
 
     
     </script>
