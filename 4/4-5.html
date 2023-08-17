@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function User(name){
+        //     this.name=name;
+        //     this.isAdmin=false;
+        // }
+        // let user = new User('보라');
+        // alert(user.name);
+        // alert(user.isAdmin);
+
+
+        // let user = new User;
+        // let user = new User();
+
+        // function User(name){
+        //     this.name = name;
+
+        //     this.sayHi = function(){
+        //         alert('제 이름은 ' + this.name + '입니다.');
+        //     };
+        // }
+        // let bora = new User('이보라');
+        // bora.sayHi();
+
+        
+        function Calculator(){
+            this.read = function(){
+                this.a = +prompt('a?',0);
+                this.b = +prompt('b?',0);
+            };
+
+            this.sum = function(){
+                return this.a + this.b;
+            }
+
+            this.mul = function(){
+                return this.a * this.b;
+            }
+        }
+        let calculator = new Calculator();
+        calculator.read();
+        alert("sum=" + calculator.sum());
+        alert("mul=" + calculator.mul());
+
+
+
+    </script>
+</body>
+</html>

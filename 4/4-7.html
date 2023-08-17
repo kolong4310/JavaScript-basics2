@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // let id1 = Symbol('id');
+        // let id2 = Symbol('id');
+        // alert(id1==id2);
+
+        // let user = {
+        //     name:'john'
+        // };
+        // let id = Symbol('id');
+        // user[id]=1;
+        // alert(user[id]);
+
+
+        let id = Symbol('id');
+        let user = {
+            name:'john',
+            age:30,
+            [id]:123
+        };
+        for(let key in user){
+            alert(key);
+        }
+        alert(user[id]);
+
+
+
+
+    </script>
+</body>
+</html>
