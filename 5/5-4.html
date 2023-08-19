@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let arr1 = new Array();
+        // let arr2 = new [];
+
+        // let fruits = ['사과','오렌지','자두'];
+        // alert(fruits[0]);
+        // alert(fruits[1]);
+
+        // let arr = ['사과',{name:'보라'},true,function() {alert('안녕하세요.')}];
+        // alert(arr[1].name);
+        // alert(arr[2]);
+        // arr[3]();
+        
+        // let fruits = ['사과','오렌지','배'];
+        // alert(fruits.pop());
+        // alert(fruits);
+        // fruits.push('감');
+        // alert(fruits);
+
+        // let fruits = ['사과','오렌지','배'];
+        // alert(fruits.shift());
+        // alert(fruits);
+        // fruits.unshift('감');
+        // alert(fruits);
+
+        // let fruits = ['바나나'];
+        // let arr = fruits;
+        // alert(arr===fruits);
+        // arr.push('배');
+        // alert(fruits);
+
+        // let fruits = ['사과','오렌지','자두'];
+        // for(let fruit of fruits){
+        //     alert(fruit);
+        // }
+
+        // let arr = [1,2,3,4,5];
+        // arr.length = 2;
+        // alert(arr);
+        // arr.length =5;
+        // alert(arr);
+        
+        // let martrix = [
+        //     [1,2,3],
+        //     [4,5,6],
+        //     [7,8,9]
+        // ];
+        // alert(martrix[1][1]);
+
+        // let arr = [1,2,3];
+        // alert(arr);
+        // alert(String(arr) ==='1,2,3');
+
+        // let styles = ['jazz','blues'];
+        // styles.push('rock');
+        // styles[Math.floor((styles.length - 1)/2)] = 'classic';
+        // alert(styles.shift());
+        // styles.unshift('rap','reggae');
+        // alert(styles);
+
+        // let arr = ['a','b'];
+        // arr.push(function(){
+        //     alert(this);
+        // })
+        // arr[2]();
+
+        function getMaxSubSum(arr){
+            let maxSum = 0;
+            let partialSum = 0;
+
+            for(let item of arr){
+                partialSum += item;
+                maxSum = Math.max(maxSum,partialSum);
+                if(partialSum<0) partialSum =0;
+            }
+            return maxSum;
+        }
+        alert( getMaxSubSum([-1, 2, 3, -9]) ); // 5
+        alert( getMaxSubSum([-1, 2, 3, -9, 11]) ); // 11
+        alert( getMaxSubSum([-2, -1, 1, 2]) ); // 3
+        alert( getMaxSubSum([100, -9, 2, -3, 5]) ); // 100
+        alert( getMaxSubSum([1, 2, 3]) ); // 6
+        alert( getMaxSubSum([-1, -2, -3]) ); // 0
+    </script>
+</body>
+</html>

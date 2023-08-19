@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let single='작은 따옴표';
+        // let double="큰 따옴표";
+        // let backticks=`백틱`;
+
+        // function sum(){
+        //     let a = +prompt('첫번째',0);
+        //     let b = +prompt('두번째',0);
+        //     return a + b;
+        // }
+        // alert(`${sum()}.`);
+
+        // let guestList = `손님:
+        //     *john
+        //     *pete
+        //     *mary
+        // `;
+        // alert(guestList);
+
+        // let str='hello';
+        // alert(str[0]);
+        // alert(str.charAt(0));
+        // alert(str[str.length-1]);
+
+        // for(let char of 'hello'){
+        //     alert(char);
+        // }
+
+        // alert('Interface'[0].toLowerCase());
+
+        // let str = 'Widget with id';
+        // alert(str.indexOf('Widget'));
+        // alert(str.indexOf('widget'));
+        // alert(str.indexOf("id"));
+
+        // let str = 'Widget with id';
+        // alert(str.indexOf('id',2));
+
+        // let str = 'As sly as a fox, as strong as an ox';
+        // let target = prompt('찾을 단어','');
+        // let pos=0;
+        // while(true){
+        //     let foundPos=str.indexOf(target,pos);
+        //     if(foundPos == -1) break;
+        //     if(target == '') break;
+
+        //     alert(`위치 : ${foundPos}`);
+        //     pos = foundPos+1;
+        // }
+
+        // let str = 'As sly as a fox, as strong as an ox';
+        // let target = prompt('찾을 단어','');
+        // let pos = -1;
+        // while((pos=str.indexOf(target,pos+1))!= -1){
+        //     alert(`위치:${pos}`);
+        // }
+
+        // let str = "widget";
+        // if(~str.indexOf("widget")){
+        //     alert('찾았다!');
+        // }
+
+        // alert("Widget with id".includes("Widget"));
+        // alert("Widget".includes("id",3));
+
+        function checkSpam(str){
+            let lowerStr = str.toLowerCase();
+            return lowerStr.includes('viagra') || lowerStr.includes('xxx');
+        }
+        alert( checkSpam('buy ViAgRA now') );
+        alert( checkSpam('free xxxxx') );
+        alert( checkSpam("innocent rabbit") );
+
+    </script>
+</body>
+</html>
