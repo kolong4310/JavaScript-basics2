@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let map = new Map();
+        // map.set('1','str');
+        // map.set(1,'num');
+        // map.set(true,'bool1');
+        // alert(map.get(1));
+        // alert(map.get('1'));
+        // alert(map.size);
+
+        // let john = {name:'john'};
+        // let visitsCountMap = new Map();
+        // visitsCountMap.set(john,123);
+        // alert(visitsCountMap.get(john));
+
+        // let john={name:'john'};
+        // let visitsCountObj = {};
+        // visitsCountObj[john]=123;
+        // alert(visitsCountObj["[object Object]"])
+
+        // let reipeMap = new Map([
+        //     ['cucumber',500],
+        //     ['tomato',340],
+        //     ['onion',40]
+        // ]);
+        // for(let vegetable  of reipeMap.keys()){
+        //     alert(vegetable );
+        // }
+        // for(let amount of reipeMap.values()){
+        //     alert(amount);
+        // }
+        // for(let entry of reipeMap){
+        //     alert(entry);
+        // }
+
+        // let map = new Map([
+        //     ['1','str1'],
+        //     [1,'num1'],
+        //     [true,'bool1']
+        // ]);
+        // alert(map.get('1'));
+
+        // let obj = {
+        //     name:'john',
+        //     age:30
+        // };
+        // let map = new Map(Object.entries(obj));
+        // alert(map.get('name'));
+
+        // let prices = Object.fromEntries([
+        //     ['banana',1],
+        //     ['orange',2],
+        //     ['meat',4]
+        // ]);
+        // alert(prices.orange);
+
+        // let map = new Map();
+        // map.set('banana',1);
+        // map.set('orage',2);
+        // map.set('meat',4);
+        // let obj=Object.fromEntries(map.entries());
+        // alert(obj.orage);
+
+        // let set = new Set();
+        // let john={name:'john'};
+        // let pete={name:'pete'};
+        // let mary={name:'mary'};
+        // set.add(john);
+        // set.add(pete);
+        // set.add(mary);
+        // set.add(john);
+        // set.add(mary);
+        // alert(set.size);
+        // for(let user of set){
+        //     alert(user.name);
+        // }
+
+        // let set = new Set(['oranges','apple','banana']);
+        // for(let value of set){
+        //     alert(value);
+        // }
+        // set.forEach((value,valueAgain,set)=>{
+        //     alert(value);
+        // });
+
+        // function unique(arr){
+        //     return Array.from(new Set(arr));
+        // }
+        // let values = ["Hare", "Krishna", "Hare", "Krishna",
+        // "Krishna", "Krishna", "Hare", "Hare", ":-O"
+        // ];
+        // alert( unique(values) ); // 얼럿창엔 `Hare, Krishna, :-O`만 출력되어야 합니다.
+
+        // function aclean(arr){
+        //     let map = new Map();
+        //     for(let word of arr){
+        //         let sorted = word.toLowerCase().split('').sort().join('');
+        //         map.set(sorted,word);
+        //     }
+        //     return Array.from(map.values());
+        // }
+        // let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+        // alert( aclean(arr) ); 
+
+        let map = new Map();
+        map.set('name','john');
+        let keys = Array.from(map.keys());
+        keys.push('more');
+        alert(keys);
+
+        
+    </script>
+</body>
+</html>
