@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function sum(a,b){
+        //     return a+b;
+        // }
+        // alert(sum(1,2,3,3,4,5));
+
+        // function sumAll(...args){
+        //     let sum =0;
+        //     for(let arg of args){
+        //         sum +=arg;
+        //     }
+        //     return sum;
+        // }
+        // alert(sumAll(1));
+        // alert(sumAll(1,2));
+        // alert(sumAll(1,2,3,4));
+
+        // function showName(firstName,lastName,...titles){
+        //     alert(firstName + ' ' + lastName);
+        //     alert(titles[0]);
+        //     alert(titles[1]);
+        //     alert(titles.length);
+        // }
+        // showName('bora','lee','software engineer','researcher');
+
+        // function showName(){
+        //     alert(arguments.length);
+        //     alert(arguments[0]);
+        //     alert(arguments[1]);
+        // }
+        // showName('bora','lee');
+        // showName('bora');
+
+
+        // let arr = [3,5,1];
+        // alert(Math.max(...arr));
+
+        // let str='hello';
+        // alert(Array.from(str));
+
+        let obj = {a:1,b:2,c:3};
+        let objCopy = { ...obj};
+        alert(JSON.stringify(obj)===JSON.stringify(objCopy));
+        alert(obj===objCopy);
+        obj.d = 4;
+        alert(JSON.stringify(obj));
+        alert(JSON.stringify(objCopy));
+    </script>
+</body>
+</html>

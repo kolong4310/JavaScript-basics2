@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function pow(x,n){
+        //     let result = 1;
+        //     for(let i=0;i<n;i++){
+        //         result *=x;
+        //     }
+        //     return result;
+        // }
+        // alert(pow(2,3));
+
+        // function pow(x,n){
+        //     if(n==1){
+        //         return x;
+        //     }else{
+        //         return x * pow(x,n-1);
+        //     }
+        // }
+        // alert(pow(2,3));
+
+        // let company = { // 동일한 객체(간결성을 위해 약간 압축함)
+        //     sales: [{name: 'John', salary: 1000}, {name: 'Alice', salary: 1600 }],
+        //     development: {
+        //         sites: [{name: 'Peter', salary: 2000}, {name: 'Alex', salary: 1800 }],
+        //         internals: [{name: 'Jack', salary: 1300}]
+        //     }
+        // };
+        // function sumSalaries(department){
+        //     if(Array.isArray(department)){
+        //         return department.reduce((prev,current)=>prev+current.salary,0);
+        //     }else{
+        //         let sum =0;
+        //         for(let subdep of Object.values(department)){
+        //             sum += sumSalaries(subdep);
+        //         }
+        //         return sum;
+        //     }
+        // }
+        // alert(sumSalaries(company));
+
+        // function sumTo(n){
+        //     let sum = 0;
+        //     for(let i=1; i<=n; i++){
+        //         sum += i;
+        //     }
+        //     return sum;
+        // }
+        // alert(sumTo(100));
+
+        // function sumTo(n){
+        //     if(n == 1) return 1;
+        //     return n + sumTo(n-1);
+        // }
+        // alert(sumTo(100));
+
+        // function factorial(n){
+        //     return (n!=1) ? n * factorial(n-1) : 1;
+        // }
+        // alert(factorial(5));
+        
+        function fib(n){
+            return n <=1 ? n:fib(n-1) + fib(n-2);
+        }
+        alert(fib(3));
+        alert(fib(7));
+
+    </script>
+</body>
+</html>
