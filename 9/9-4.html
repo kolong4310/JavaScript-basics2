@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class CoffeeMachine{
+            _waterAmount = 0;
+
+            set waterAmount(value){
+                if (value<0) throw new Error("물의 양은 음수가 될 수 없습니다.");
+                this._waterAmount = value;
+            }
+
+            get waterAmount(){
+                return this._waterAmount;
+            }
+
+            constructor(power){
+                this._power = power;
+                alert(`전력량이 ${power}인 커피머신을 만듭니다`);
+            }
+        }
+        let coffee = new CoffeeMachine(100);
+        coffee.waterAmount = -10;
+    </script>
+</body>
+</html>

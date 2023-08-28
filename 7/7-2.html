@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let obj = {
+        //     get propName(){
+
+        //     },
+        //     set propName(value){
+
+        //     }
+        // }
+
+        // let user ={
+        //     name:'john',
+        //     surname:'smith',
+
+        //     get fullName(){
+        //         return `${this.name} ${this.surname}`;
+        //     },
+
+        //     set fullName(value){
+        //         [this.name, this.surname]=value.split(" ");
+        //     }
+        // };
+        // user.fullName = "Alice Cooper";
+        // alert(user.name);
+        // alert(user.surname);
+        
+
+        let user = {
+            get name(){
+                return this._name;
+            },
+
+            set name(value){
+                if(value.length<4){
+                    alert('입력하신 값이 너무 짧습니다.');
+                    return;
+                }
+                this._name=value;
+            }
+        };
+        user.name='pete';
+        alert(user.name);
+        user.name="avc"; //짧은 이름 할당
+    </script>
+</body>
+</html>

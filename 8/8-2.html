@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // let animal ={
+        //     eats:true
+        // };
+        // function Rabbit(name){
+        //     this.name = name;
+        // }
+        // Rabbit.prototype=animal;
+        // let rabbit=new Rabbit('흰 토끼');
+        // alert(rabbit.eats);
+
+        // function Rabbit(name){
+        //     this.name = name;
+        //     alert(name);
+        // }
+        // let rabbit = new Rabbit("흰 토끼");
+        // let rabbit2 = new rabbit.constructor("검정 토끼");
+    
+        function User(name){
+            this.name = name;
+        }
+        let user = new User('john');
+        let user2 = new user.constructor('pete');
+        alert(user2.name);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let user ={
+        //     name:'john'
+        // };
+        // let descriptor = Object.getOwnPropertyDescriptor(user,'name');
+        // alert(JSON.stringify(descriptor,null,2));
+
+
+        let user = {
+            name:'john'
+        };
+        Object.defineProperty(user,'name',{
+            value:'john',
+            enumerable:true,
+            configurable:true
+        });
+        alert(user.name);
+        user.name = 'pete';
+    </script>
+</body>
+</html>
