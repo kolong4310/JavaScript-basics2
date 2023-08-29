@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let elem = document.elementFromPoint(x,y);
+
+        let elem = document.getElementById('coo');
+        function createMessageUnder(elem,html){
+            let message = document.createElement('div');
+            message.style.cssText = 'position:fixed; color:red;';
+            let coords = elem.getBoundingClientRect();
+            message.style.left=coords.left + "px";
+            message.style.top=coords.bottom +"px";
+
+            message.innerHTML = html;
+            return message;
+        }
+        let message = createMessageUnder(elem,'독도는 우리땅!');
+        document.body.append(message);
+        setTimeout(() => message.remove(),5000);
+    </script>
+</body>
+</html>

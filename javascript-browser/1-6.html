@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input>
+
+    <script>
+        // document.body.MyData = {
+        //     name:'Caesar',
+        //     title:'Imperator'
+        // };
+        // alert(document.body.MyData.title);
+
+        // document.body.sayTagName = function(){
+        //     alert(this.tagName);
+        // }
+        // document.body.sayTagName();
+
+        // Element.prototype.sayHi = function(){
+        //     alert(`hello , I'm ${this.tagName}`);
+        // };
+        // document.documentElement.sayHi();
+        // document.body.sayHi();
+
+        let input = document.querySelector('input');
+        input.setAttribute('id','id');
+        alert(input.id);
+        input.id = 'newId';
+        alert(input.getAttribute('id'));
+
+    </script>
+</body>
+</html>
