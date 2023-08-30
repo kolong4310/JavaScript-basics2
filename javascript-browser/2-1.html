@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input value = '클릭해주세요' onclick = "countRabbits()" type="button">
+    <input value = '클릭1' id="elem" type="button">
+    <button onclick="alert(this.innerHTML)"> 클릭해주세요</button>
+    <input type="button" value="클릭22" id="elem1">
+    <button id="elem2">클릭333</button>
+    <input type="button" id="hider" value="text룰" >
+    <div id="text">text</div>
+    <script>
+        function countRabbits(){
+            for(let i=1; i<=3; i++){
+                alert(`토끼 ${i} 마리`);
+            }
+        }
+
+        elem.onclick = function(){
+            alert('클릭1');
+        };
+
+        elem1.onclick = function(event){
+            alert(event.type + "이벤트가 " + event.currentTarget + "에서 발생했습니다.");
+            alert("이벤트가 발생한곳의 좌표는 " + event.clientX + ":" + event.clientY + "입니다.)");
+        }
+
+        let obj = {
+            handleEvent(event){
+                alert(event.type + " 이벤트가 " + event.currentTarget + "에서 발생했습니다.");
+            }
+        };
+        elem2.addEventListener('click',obj);
+
+        document.getElementById('hider').onclick = function(){
+            if(document.getElementById('text').hidden == true){
+                document.getElementById('text').hidden = false;
+            }else{
+                document.getElementById('text').hidden = true;
+            }
+           
+        }
+    </script>
+</body>
+</html>

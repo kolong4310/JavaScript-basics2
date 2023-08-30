@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="elem" onclick="alert('click');">자동으로 클릭되는 버튼</button>
+
+    <h1 id="elem1">hello from the script!</h1>
+
+    <h1 id="elem2">이보라님, 환영합니다.</h1>
+
+    
+
+    <script>
+        // let event = new Event('click');
+        // elem.dispatchEvent(event);
+
+        document.addEventListener('hello', function(event){
+            alert('hello from ' + event.target.tagName); //hello from h1
+        });
+        let event = new Event('hello', {bubbles:true});
+        elem1.dispatchEvent(event);
+
+        elem2.addEventListener('hello', function(event){
+            alert(event.detail.name);
+        });
+        elem2.dispatchEvent(new CustomEvent('hello', {
+            detail: {name : "보라"}
+        }));
+
+
+
+
+    </script>
+</body>
+</html>

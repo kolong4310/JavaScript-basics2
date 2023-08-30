@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .menu li {
+            display: inline-block;
+            margin: 0;
+        }
+
+        .menu > li a {
+            display: inline-block;
+            margin: 0 2px;
+            outline: none;
+            text-align: center;
+            text-decoration: none;
+            font: 14px/100% sans-serif;
+            padding: .5em 2em .55em;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+            border-radius: .5em;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+            color: #d9eef7;
+            border: solid 1px #0076a3;
+            background: #0095cd;
+        }
+
+        .menu > li:hover a {
+            text-decoration: none;
+            background: #007ead;
+        }
+
+    </style>
+</head>
+<body>
+    <a href="/" onclick="return false">이곳</a>
+    이나
+    <a href="/" onclick="event.preventDefault()">이곳을</a> 클릭
+
+    <ul id="menu" class="menu">
+        <li><a href="/html">html</a></li>
+        <li><a href="/javascript">javascript</a></li>
+        <li><a href="/css">css</a></li>
+
+    </ul>
+
+    <button>마우스 오른쪽 클릭 (컨텍스트메뉴)</button>
+    <button oncontextmenu="alert('커스텀 메뉴가 뜸'); return false">마우스 오른쪽 클릭</button>
+
+    <p>문서 레벨 컨텍스트 메뉴</p>
+    <button id="elem">버튼 레벨 컨텍스트 메뉴</button>
+    <script>
+        menu.onclick = function(event){
+            if(event.target.nodeName != 'A') return;
+
+            let href = event.target.getAttribute('href');
+            alert(href);
+            return false;
+        }
+
+        elem.oncontextmenu = function(event){
+            event.preventDefault();
+            // event.stopPropagation(); //추가시 버블링을 멈추게 하여 문서컨텍스트 메뉴 안뜨도록, 해당 내용은 비추
+            alert('버튼 컨텍스트 메뉴');
+        };
+        document.oncontextmenu = function(event){
+            if(event.defaultPrevented) return;  //event.stopPropagation()를 사용하는 것 대신에 document 핸들러에서 기본 동작이 막혀있는지 확인
+            event.preventDefault();
+            alert('문서 컨텍스트 메뉴');
+        };
+    </script>
+</body>
+</html>
