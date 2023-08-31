@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        span{
+            width: 550px;
+            height: 400px;
+        }
+
+        .selected {
+            background: #0f0;
+        }
+
+        li {
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <button id="button"> Alt,Shift 키를 누른 상태에서 클릭</button>
+
+    <input onmousemove="this.value = event.clientX + ':' + event.clientY" value="Mouse over">
+
+    <span ondblclick = "alert('bdlclick')">이곳을 더블클릭</span>
+
+    <span ondblclick="alert('클릭!!')" onmousedown="return false"> 더블클릭</span>
+
+    <div oncopy = "alert('복사기능을 막아 놓았습니다.'); return false">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent convallis ultrices lacus ut dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+    </div>
+    <br>
+    선택하고자 하는 요소 클릭
+    <ul id="ul">
+        <li>React</li>
+        <li>Angular</li>
+        <li>Vue</li>
+        <li>Svelte</li>
+        <li>Blazor</li>
+    </ul>
+
+
+    <script>
+        button.onclick = function(event){
+            if(event.altKey && event.shiftKey){
+                alert('1111');
+            }
+        };
+
+        
+        ul.onclick = function(event){
+            if(event.target.tagName !="LI") return;
+            if(event.ctrlKey || event.metaKey){
+                toggleSelect(event.target);
+            }else{
+                singleSelect(event.target);
+            }
+        }
+        ul.onmousedown = function(){
+            return false;
+        };
+        function toggleSelect(li){
+            li.classList.toggle('selected');
+        }
+        function singleSelect(li){
+            let selected = ul.querySelectorAll('.selected');
+            for(let elem of selected){
+                elem.classList.remove('selected');
+            }
+            li.classList.add('selected');
+        }
+    </script>
+</body>
+</html>
