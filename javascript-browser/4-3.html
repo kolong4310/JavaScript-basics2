@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" onchange="alert(this.value)">
+    <input type="button" value="111">
+
+    <input type="text" id="inputA"> oninput <span id="result"></span>
+
+    <br>
+    <input type="text" id="inputB">
+
+    <script>
+
+        inputA.oninput = function(){
+            result.innerHTML = inputA.value;
+        };
+
+        inputB.oncut = inputB.oncopy = inputB.onpaste = function(event){
+            alert(event.type + ' - ' + event.clipboardData.getDate('text/plain'));
+        }
+
+    </script>
+</body>
+</html>

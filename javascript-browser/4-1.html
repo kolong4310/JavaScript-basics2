@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--
+    <form name="my">
+        <input name="one" value="1">
+        <input name="two" value="2">
+    </form>
+-->
+
+    <form>
+        <input type="radio" name="age" value="10">
+        <input type="radio" name="age" value="20">
+    </form>
+
+    <select id="select">
+        <option value="apple">apple</option>
+        <option value="pear">pear</option>
+        <option value="banana">banana</option>
+    </select>
+
+    <script>
+        // let form = document.forms.my;
+        // let elem = form.elements.one;
+        // alert(elem.value);
+
+        let form = document.forms[0];
+        let ageElem = form.elements.age;
+        alert(ageElem[0]);
+
+        select.options[2].selected=true;
+        select.selectedIndex = 2;
+        select.value ='banana';
+
+        
+
+    </script>
+</body>
+</html>
